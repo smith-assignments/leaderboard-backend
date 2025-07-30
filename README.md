@@ -1,25 +1,34 @@
-# 🏆 Leaderboard Frontend
+# 🏆 Leaderboard Backend
 
-This is the **React.js frontend** for the **Leaderboard System**, enabling users to claim points, add new users, and view rankings in real time.  
-
-🔗 **Live App:** [https://3w-leaderboard-smith.netlify.app/](https://3w-leaderboard-smith.netlify.app/)
+This is the **Node.js + Express + MongoDB backend** for the **Leaderboard System**, powering APIs for user management, point claiming, ranking, and claim history.
 
 ---
 
 ## 🚀 Features
-- Select a user and claim **random points (1–10)**.  
-- Dynamic leaderboard updates with real-time rankings.  
-- Add new users directly from the UI.  
-- Responsive and minimal UI.
+- REST APIs for user creation, claiming points, leaderboard ranking.
+- Random point allocation logic (1–10 points per claim).
+- Claim history tracking stored in MongoDB.
+- CORS enabled for frontend integration.
 
 ---
 
 ## 🛠 Tech Stack
-- **React.js** (Hooks)  
-- **Fetch** for API calls  
-- **Bootstrap** / minimal custom styling  
+- **Node.js** with **Express.js**
+- **MongoDB** (Mongoose ODM)
+- **Nodemon** for development
 
 ---
 
-## 🔗 Backend
-This app connects to the [Leaderboard Backend](https://leaderboard-backend-dh11.onrender.com) built with Node.js, Express, and MongoDB.
+## 📡 API Endpoints
+- GET /api/users → Fetch all users
+- POST /api/users → Add new user
+- POST /api/claim/:userId → Claim random points for a user
+- GET /api/users/leaderboard → Fetch sorted leaderboard according to their rank
+- GET /api/users/history → Fetches global history of claims of all users
+- GET /api/users/history/:userId → Fetch claim history for a user
+
+---
+
+🔗 Frontend
+Connects with the Leaderboard Frontend deployed at:
+👉 [https://3w-leaderboard-smith.netlify.app/](https://3w-leaderboard-smith.netlify.app/)
