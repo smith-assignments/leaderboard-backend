@@ -26,6 +26,7 @@ This is the **Node.js + Express + MongoDB backend** for the **Leaderboard System
 - GET /api/users/leaderboard → Fetch sorted leaderboard according to their rank
 - GET /api/users/history → Fetches global history of claims of all users
 - GET /api/users/history/:userId → Fetch claim history for a user
+  
   {Refer to postman collection for API testing}
 
 ---
